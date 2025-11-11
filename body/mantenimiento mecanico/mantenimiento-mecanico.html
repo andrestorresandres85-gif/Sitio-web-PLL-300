@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento Mecánico | Manual Técnico SENA</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style/styles.css">
+    <link rel="icon" href="/style/img/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Planta Líquido-Líquido 300</h2>
+            <p class="sidebar-subtitle">Manual Técnico SENA</p>
+        </div>
+        
+        <ul class="nav-menu">
+            <li>
+                <a href="../../index.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="../introduccion/introduccion.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    <span>Introducción</span>
+                </a>
+            </li>
+            <li>
+                <a href="../operacion/operacion.html" class="nav-link has-submenu">
+                    <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v6m5.2-13.2-4.2 4.2m0 6 4.2 4.2M23 12h-6m-6 0H5m13.2 5.2-4.2-4.2m0-6 4.2-4.2"></path></svg>
+                    <span>Manual de Operación</span>
+                    <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <ul class="submenu">
+                    <li><a href="../operacion/operacion.html#generalidades">Generalidades</a></li>
+                    <li><a href="../operacion/operacion.html#descripcion">Descripción del Proceso</a></li>
+                    <li><a href="../operacion/operacion.html#componentes">Componentes</a></li>
+                    <li><a href="../operacion/operacion.html#instrumentacion">Instrumentación</a></li>
+                    <li><a href="../operacion/operacion.html#procedimientos">Procedimientos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../practicas/practicas.html" class="nav-link has-submenu">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"></path><path d="M8.5 2h7"></path></svg>
+                    <span>Manual de Prácticas</span>
+                    <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <ul class="submenu">
+                    <li><a href="../practicas/practicas.html#fundamentos">Fundamentos Teóricos</a></li>
+                    <li><a href="../practicas/practicas.html#practica-01">Práctica 01</a></li>
+                    <li><a href="../practicas/practicas.html#practica-02">Práctica 02</a></li>
+                    <li><a href="../practicas/practicas.html#practica-03">Práctica 03</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../mantenimiento mecanico/mantenimiento-mecanico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    <span>Mantenimiento Mecánico</span>
+                </a>
+            </li>
+            <li>
+                <a href="../mantenimiento electrico/mantenimiento-electrico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    <span>Mantenimiento Eléctrico</span>
+                </a>
+            </li>
+            <li>
+                <a href="../control automatico/control-automatico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                    <span>Control Automático</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container py-5" style="max-width: 900px;">
+                <div class="mb-4">
+                    <h1 class="display-5 fw-bold mb-3">Manual de Mantenimiento Mecánico</h1>
+                    <p class="text-muted">
+                        Guía completa para el mantenimiento preventivo y correctivo de los equipos mecánicos
+                    </p>
+                </div>
+
+                <!-- Introducción -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-wrench text-primary me-2"></i>
+                            1. Introducción
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted">
+                            El manual de mantenimiento mecánico proporciona las instrucciones necesarias para realizar 
+                            el mantenimiento preventivo y correctivo de todos los componentes mecánicos de la Planta 
+                            de Extracción Líquido-Líquido.
+                        </p>
+                        <p class="text-muted">
+                            El mantenimiento adecuado es fundamental para garantizar la operación segura y eficiente 
+                            de la planta, así como para prolongar la vida útil de los equipos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Componentes -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-box-seam text-success me-2"></i>
+                            3. Componentes de la Planta
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">Sistema de Vidrio</h6>
+                                    <ul class="small mb-0">
+                                        <li>Tanques (TA 304-307)</li>
+                                        <li>Separadores (SE 302-303)</li>
+                                        <li>Columna de extracción (E 308)</li>
+                                        <li>Conexiones y juntas</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">Sistema de Tuberías</h6>
+                                    <ul class="small mb-0">
+                                        <li>Tubing acero inoxidable</li>
+                                        <li>Conexiones tipo tubing</li>
+                                        <li>Soportería</li>
+                                        <li>Accesorios</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">Válvulas y Actuadores</h6>
+                                    <ul class="small mb-0">
+                                        <li>Válvulas reguladoras</li>
+                                        <li>Válvulas manuales</li>
+                                        <li>Válvulas check</li>
+                                        <li>Bombas dosificadoras</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Precauciones de Seguridad -->
+                <div class="card border-danger mb-4">
+                    <div class="card-header bg-danger bg-opacity-10">
+                        <h5 class="card-title mb-0 text-danger">
+                            <i class="bi bi-exclamation-triangle me-2"></i>
+                            4. Precauciones de Seguridad
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-danger">
+                            <h6 class="alert-heading fw-bold">ADVERTENCIAS IMPORTANTES</h6>
+                            <ul class="small mb-0">
+                                <li class="mb-2">⚠ Desenergizar completamente la planta antes de realizar cualquier mantenimiento</li>
+                                <li class="mb-2">⚠ Usar equipo de protección personal: gafas, guantes y bata</li>
+                                <li class="mb-2">⚠ Manipular equipos de vidrio con extremo cuidado</li>
+                                <li class="mb-2">⚠ Verificar que no haya presión en las líneas antes de desconectar</li>
+                                <li>⚠ Drenar completamente todos los fluidos antes del mantenimiento</li>
+                            </ul>
+                        </div>
+
+                        <div class="alert alert-secondary">
+                            <h6 class="fw-bold mb-3">Equipo de Seguridad Requerido</h6>
+                            <div class="row small">
+                                <div class="col-6">
+                                    <p class="mb-1">• Gafas de seguridad</p>
+                                    <p class="mb-1">• Guantes de nitrilo</p>
+                                    <p class="mb-1">• Bata de laboratorio</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="mb-1">• Zapatos cerrados</p>
+                                    <p class="mb-1">• Extintor cerca</p>
+                                    <p class="mb-1">• Kit de derrames</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herramientas -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-tools text-warning me-2"></i>
+                            5. Equipo y Herramientas de Mantenimiento
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">Herramientas Generales</h6>
+                                    <ul class="small mb-0">
+                                        <li>Juego de llaves hexagonales</li>
+                                        <li>Destornilladores (plano y estrella)</li>
+                                        <li>Pinzas</li>
+                                        <li>Multímetro</li>
+                                        <li>Torquímetro</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">Materiales de Limpieza</h6>
+                                    <ul class="small mb-0">
+                                        <li>Agua destilada</li>
+                                        <li>Detergente neutro</li>
+                                        <li>Paños libres de pelusa</li>
+                                        <li>Aire comprimido filtrado</li>
+                                        <li>Solventes apropiados</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sistema de Equipos de Vidrio -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">6.1 Sistema de Equipos de Vidrio</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="section-border mb-4">
+                            <h6 class="fw-bold mb-2">6.1.1 Tanques de Reactivos (TA 304, TA 307)</h6>
+                            <p class="small text-muted mb-3">
+                                Tanques de vidrio borosilicato de 20 litros para almacenamiento de solvente y alimentación.
+                            </p>
+                            <div class="alert alert-secondary">
+                                <p class="fw-bold small mb-2">Mantenimiento:</p>
+                                <ul class="small mb-0">
+                                    <li>Inspección visual diaria de grietas o daños</li>
+                                    <li>Limpieza después de cada uso</li>
+                                    <li>Verificación de juntas esmeriladas</li>
+                                    <li>Revisión de conexiones de flanche</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="section-border mb-4">
+                            <h6 class="fw-bold mb-2">6.1.4 Columna de Extracción (E 308)</h6>
+                            <p class="small text-muted mb-3">
+                                Columna de vidrio de 1.9 m de altura, diámetro interno 5.5 cm, con agitador de 10 discos.
+                            </p>
+                            <div class="alert alert-secondary">
+                                <p class="fw-bold small mb-2">Mantenimiento Crítico:</p>
+                                <ul class="small mb-0">
+                                    <li>Inspección de la integridad del vidrio</li>
+                                    <li>Verificación del eje del agitador (alineación)</li>
+                                    <li>Limpieza de discos de agitación</li>
+                                    <li>Revisión de tomas de muestra</li>
+                                    <li>Verificación de sellos y empaques</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="section-border">
+                            <h6 class="fw-bold mb-2">Tanques de Producto (TA 305, TA 306)</h6>
+                            <p class="small text-muted mb-3">
+                                Balones de 20 litros para recolección de extracto y refinado con adaptadores especiales.
+                            </p>
+                            <div class="alert alert-secondary">
+                                <p class="fw-bold small mb-2">Mantenimiento:</p>
+                                <ul class="small mb-0">
+                                    <li>Drenaje completo después de cada operación</li>
+                                    <li>Limpieza con agua destilada</li>
+                                    <li>Inspección de adaptadores y flanches</li>
+                                    <li>Verificación de conexiones de instrumentación</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sistema de Tuberías -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">6.2 Sistema de Tuberías</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted">
+                            El sistema de tuberías está construido en acero inoxidable tipo tubing de 1/2 pulgada, 
+                            con conexiones tipo compresión que facilitan el mantenimiento.
+                        </p>
+
+                        <div class="alert alert-secondary mt-3">
+                            <h6 class="fw-bold mb-3">Procedimiento de Mantenimiento:</h6>
+                            <ol class="small mb-0">
+                                <li>Inspección visual de fugas o corrosión</li>
+                                <li>Verificación del apriete de conexiones</li>
+                                <li>Limpieza externa con paño húmedo</li>
+                                <li>Purga periódica de líneas</li>
+                                <li>Verificación de soportería y alineación</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Válvulas y Accesorios -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">6.3 Sistema de Válvulas y Accesorios</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-2">Válvulas Reguladoras</h6>
+                                    <p class="small mb-2">Mantenimiento trimestral:</p>
+                                    <ul class="small mb-0">
+                                        <li>Calibración de actuador</li>
+                                        <li>Verificación de carrera</li>
+                                        <li>Limpieza de conexiones</li>
+                                        <li>Prueba de respuesta</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-2">Bombas Dosificadoras</h6>
+                                    <p class="small mb-2">Mantenimiento mensual:</p>
+                                    <ul class="small mb-0">
+                                        <li>Inspección de diafragma</li>
+                                        <li>Limpieza de válvulas check</li>
+                                        <li>Verificación de calibración</li>
+                                        <li>Lubricación de mecanismos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Registro -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-clipboard-check text-info me-2"></i>
+                            8. Registro de Mantenimiento Preventivo
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted">
+                            Es fundamental mantener un registro detallado de todas las actividades de mantenimiento 
+                            realizadas en la planta. Este registro debe incluir:
+                        </p>
+
+                        <div class="alert alert-secondary">
+                            <ul class="small mb-0">
+                                <li>Fecha y hora de la intervención</li>
+                                <li>Equipo o componente intervenido</li>
+                                <li>Tipo de mantenimiento (preventivo/correctivo)</li>
+                                <li>Descripción de las actividades realizadas</li>
+                                <li>Repuestos utilizados</li>
+                                <li>Personal que realizó el mantenimiento</li>
+                                <li>Observaciones y recomendaciones</li>
+                                <li>Próxima fecha de mantenimiento</li>
+                            </ul>
+                        </div>
+
+                        <div class="alert alert-info mt-3">
+                            <h6 class="fw-bold mb-2">Frecuencias Recomendadas:</h6>
+                            <div class="row small">
+                                <div class="col-6">
+                                    <p class="mb-1">• <strong>Diario:</strong> Inspección visual</p>
+                                    <p class="mb-1">• <strong>Semanal:</strong> Limpieza general</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="mb-1">• <strong>Mensual:</strong> Bombas y válvulas</p>
+                                    <p class="mb-1">• <strong>Trimestral:</strong> Calibración</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="d-flex justify-content-between mt-5">
+                    <a href="/body/practicas/practicas.html" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left me-2"></i>Manual de Prácticas
+                    </a>
+                    <a href="/body/mantenimiento electrico/mantenimiento-electrico.html" class="btn btn-primary">
+                        Mantenimiento Eléctrico<i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Operación | Manual Técnico SENA</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style/styles.css">
+    <link rel="icon" href="/style/img/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Planta Líquido-Líquido 300</h2>
+            <p class="sidebar-subtitle">Manual Técnico SENA</p>
+        </div>
+        
+        <ul class="nav-menu">
+            <li>
+                <a href="../../index.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="../introduccion/introduccion.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    <span>Introducción</span>
+                </a>
+            </li>
+            <!-- operacion -->
+            <li>
+                <a href="../operacion/operacion.html" class="nav-link has-submenu">
+                    <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v6m5.2-13.2-4.2 4.2m0 6 4.2 4.2M23 12h-6m-6 0H5m13.2 5.2-4.2-4.2m0-6 4.2-4.2"></path></svg>
+                    <span>Manual de Operación</span>
+                    <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <ul class="submenu">
+                    <li><a href="../operacion/operacion.html#generalidades">Generalidades</a></li>
+                    <li><a href="../operacion/operacion.html#descripcion">Descripción del Proceso</a></li>
+                    <li><a href="../operacion/operacion.html#componentes">Componentes</a></li>
+                    <li><a href="../operacion/operacion.html#instrumentacion">Instrumentación</a></li>
+                    <li><a href="../operacion/operacion.html#procedimientos">Procedimientos</a></li>
+                </ul>
+            </li>
+              <!-- practicas -->
+            <li>
+                <a href="../practicas/practicas.html" class="nav-link has-submenu">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"></path><path d="M8.5 2h7"></path></svg>
+                    <span>Manual de Prácticas</span>
+                    <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <ul class="submenu">
+                    <li><a href="../practicas/practicas.html#fundamentos">Fundamentos Teóricos</a></li>
+                    <li><a href="../practicas/practicas.html#practica-01">Práctica 01</a></li>
+                    <li><a href="../practicas/practicas.html#practica-02">Práctica 02</a></li>
+                    <li><a href="../practicas/practicas.html#practica-03">Práctica 03</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../mantenimiento mecanico/mantenimiento-mecanico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    <span>Mantenimiento Mecánico</span>
+                </a>
+            </li>
+            <li>
+                <a href="../mantenimiento electrico/mantenimiento-electrico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    <span>Mantenimiento Eléctrico</span>
+                </a>
+            </li>
+            <li>
+                <a href="../control automatico/control-automatico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                    <span>Control Automático</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container py-5" style="max-width: 900px;">
+                <div class="mb-4">
+                    <h1 class="display-5 fw-bold mb-3">Manual de Operación</h1>
+                    <p class="text-muted">
+                        Guía completa para la operación de la Planta de Extracción Líquido-Líquido
+                    </p>
+                </div>
+
+                <!-- Generalidades -->
+                <section id="generalidades" class="mb-5 scroll-mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title h5 mb-0">
+                                <i class="bi bi-gear text-primary me-2"></i>
+                                1. Generalidades
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">
+                                La Planta Piloto de Extracción líquido–líquido permite la separación de uno o más componentes 
+                                de una mezcla líquida, poniendo en contacto la mezcla líquida con un solvente, uno de los líquidos 
+                                presentes en la mezcla migra hacia el solvente, produciéndose la separación.
+                            </p>
+                            <p class="text-muted">
+                                La Planta posee una columna de extracción, tipo agitada, de varias etapas, con alimentación 
+                                continua y control de los flujos de los líquidos. En ella, los practicantes pueden comprender 
+                                los fundamentos de esta importante operación unitaria.
+                            </p>
+                            <p class="text-muted">
+                                El control automático del proceso se hace a través de un Controlador Lógico Programable (PLC) 
+                                industrial. El proceso puede ser monitoreado, localmente, desde una pantalla gráfica o remotamente, 
+                                desde el PC.
+                            </p>
+
+                            <div class="alert alert-info mt-4">
+                                <h6 class="alert-heading fw-bold">En la Planta los practicantes podrán:</h6>
+                                <ul class="mb-0 small">
+                                    <li>Estudiar la hidrodinámica y la transferencia de masa de los sistemas líquido – líquido.</li>
+                                    <li>Realizar la observación de la dispersión de las fases ligeras y pesadas.</li>
+                                    <li>Determinar las unidades de transferencia de masa y la altura de una unidad de transferencia.</li>
+                                    <li>Establecer la influencia de los flujos de los líquidos en la eficiencia de la extracción.</li>
+                                    <li>Correlacionar la influencia de la agitación de la columna con la eficiencia de la extracción.</li>
+                                    <li>Realizar balances de masa.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Descripción del Proceso -->
+                <section id="descripcion" class="mb-5 scroll-mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title h5 mb-0">
+                                <i class="bi bi-diagram-3 text-success me-2"></i>
+                                2. Descripción del Proceso
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">
+                                La extracción se lleva a cabo alimentando la fase pesada de líquido por la parte superior de la 
+                                columna de extracción (E 308) y, por el fondo la liviana. La operación de transferencia de masa 
+                                se realiza al poner en contacto estas dos fases.
+                            </p>
+                            
+                            <div class="alert alert-secondary">
+                                <h6 class="fw-bold mb-3">Terminología del proceso:</h6>
+                                <div class="row g-2">
+                                    <div class="col-md-6">
+                                        <p class="mb-2"><strong>Alimentación:</strong> <small>La solución que se va a extraer</small></p>
+                                        <p class="mb-2"><strong>Solvente:</strong> <small>El líquido con el cual se pone en contacto</small></p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="mb-2"><strong>Extracto:</strong> <small>El producto de la operación rico en solvente</small></p>
+                                        <p class="mb-2"><strong>Refinado:</strong> <small>El líquido residual de donde se separó el soluto</small></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="text-muted">
+                                La columna está equipada con un agitador de discos en toda su longitud, al cual se le puede 
+                                variar la velocidad de manera electrónica.
+                            </p>
+                            <p class="text-muted">
+                                Para la alimentación de las fases, se dispone de dos bombas dosificadoras de flujo variable, 
+                                M 309 y M 310. Se cuenta con dos tanques para los productos que ingresan a la columna 
+                                (alimentación y solvente) y dos para los de salida (extracto y refinado).
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Componentes -->
+                <section id="componentes" class="mb-5 scroll-mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title h5 mb-0">
+                                <i class="bi bi-box-seam text-warning me-2"></i>
+                                3. Componentes de la Planta
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">
+                                La Planta de Extracción líquido líquido está compuesta por equipos interconectados con tubería 
+                                de acero inoxidable tipo "tubing", instalados sobre una estructura metálica tubular, también 
+                                fabricada en acero inoxidable.
+                            </p>
+
+                            <div class="row g-3 mt-3">
+                                <div class="col-md-6">
+                                    <div class="border rounded p-3 h-100">
+                                        <h6 class="fw-bold mb-3">Equipos Principales</h6>
+                                        <ul class="small mb-0">
+                                            <li>Agitador AG 301</li>
+                                            <li>Extractor E 308 (7 litros)</li>
+                                            <li>Separadores SE 302, SE 303 (5 litros c/u)</li>
+                                            <li>Tanques TA 304-307 (20 litros c/u)</li>
+                                            <li>Bombas M 309, M 310</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="border rounded p-3 h-100">
+                                        <h6 class="fw-bold mb-3">Características</h6>
+                                        <ul class="small mb-0">
+                                            <li>Material: Vidrio borosilicato</li>
+                                            <li>Tubing: Acero inoxidable</li>
+                                            <li>Control: PLC industrial</li>
+                                            <li>Monitoreo: Local y remoto</li>
+                                            <li>Operación: Manual/Automática</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Instrumentación -->
+                <section id="instrumentacion" class="mb-5 scroll-mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title h5 mb-0">
+                                <i class="bi bi-speedometer2 text-info me-2"></i>
+                                5. Instrumentación de la Planta
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <h6 class="fw-bold">Variables Controladas</h6>
+                                <ul class="small">
+                                    <li>Flujo de alimento y solvente</li>
+                                    <li>Velocidad de agitación</li>
+                                    <li>Nivel en el extractor</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="fw-bold">Variables Medidas</h6>
+                                <ul class="small">
+                                    <li>Nivel de los tanques de almacenamiento (LT 304-307)</li>
+                                    <li>Temperatura en el extractor</li>
+                                    <li>Flujo de alimentación y solvente</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h6 class="fw-bold">Sistemas de Control</h6>
+                                <ul class="small mb-0">
+                                    <li><strong>Manual:</strong> Operación directa de actuadores</li>
+                                    <li><strong>Automático:</strong> Control vía PLC con monitoreo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Procedimientos -->
+                <section id="procedimientos" class="mb-5 scroll-mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title h5 mb-0">
+                                <i class="bi bi-list-check text-danger me-2"></i>
+                                14. Procedimiento de Operación en Modo Automático
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4 section-border">
+                                <h6 class="fw-bold mb-2">ETAPA 1: Cargue de Solvente y Alimento</h6>
+                                <p class="small text-muted mb-0">
+                                    Preparación y carga de los tanques de alimentación (TA 307) y solvente (TA 304) 
+                                    con las cantidades requeridas para el proceso.
+                                </p>
+                            </div>
+
+                            <div class="mb-4 section-border">
+                                <h6 class="fw-bold mb-2">ETAPA 2: Llenado de la Columna</h6>
+                                <p class="small text-muted mb-0">
+                                    Inicio de bombeo hacia la columna de extracción hasta alcanzar el nivel operativo 
+                                    establecido en el controlador.
+                                </p>
+                            </div>
+
+                            <div class="mb-4 section-border">
+                                <h6 class="fw-bold mb-2">ETAPA 3: Extracción</h6>
+                                <p class="small text-muted mb-0">
+                                    Proceso continuo de extracción con control automático de flujos, nivel y agitación. 
+                                    Separación de extracto y refinado en los tanques correspondientes.
+                                </p>
+                            </div>
+
+                            <div class="mb-4 section-border">
+                                <h6 class="fw-bold mb-2">ETAPA 4: Drenaje de la Planta</h6>
+                                <p class="small text-muted mb-0">
+                                    Vaciado controlado de la columna y líneas hacia los tanques de producto para 
+                                    finalizar el proceso de manera segura.
+                                </p>
+                            </div>
+
+                            <div class="alert alert-danger">
+                                <h6 class="alert-heading fw-bold">Verificación Previa</h6>
+                                <p class="small mb-0">
+                                    Antes de iniciar cualquier proceso, verificar que todos los sistemas estén en condiciones 
+                                    operativas: válvulas cerradas, tanques vacíos, instrumentación calibrada y sistema eléctrico 
+                                    energizado correctamente.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Limpieza -->
+                <section class="mb-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title h5 mb-0">
+                                <i class="bi bi-droplet text-primary me-2"></i>
+                                16. Limpieza de la Planta
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">
+                                La limpieza adecuada de la planta es fundamental para mantener la calidad de los procesos 
+                                y prolongar la vida útil de los equipos, especialmente los de vidrio borosilicato.
+                            </p>
+
+                            <div class="alert alert-secondary">
+                                <h6 class="fw-bold mb-3">Procedimiento para Equipos de Vidrio:</h6>
+                                <ol class="small mb-0">
+                                    <li>Drenar completamente todos los líquidos</li>
+                                    <li>Enjuagar con agua destilada</li>
+                                    <li>Lavar con solución detergente apropiada</li>
+                                    <li>Enjuagar nuevamente con agua destilada</li>
+                                    <li>Secar al aire o con aire comprimido filtrado</li>
+                                </ol>
+                            </div>
+
+                            <div class="alert alert-info mt-3">
+                                <h6 class="fw-bold mb-2">Frecuencia de Limpieza:</h6>
+                                <p class="small mb-0">
+                                    Realizar limpieza completa después de cada práctica o proceso. Limpieza profunda 
+                                    mensual de todos los componentes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Navigation Buttons -->
+                <div class="d-flex justify-content-between mt-5">
+                    <a href="/body/introduccion/introduccion.html" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left me-2"></i>Introducción
+                    </a>
+                    <a href="/body/practicas/practicas.html" class="btn btn-primary">
+                        Manual de Prácticas<i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+</body>
+</html>
