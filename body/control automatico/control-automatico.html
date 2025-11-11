@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Automático | Manual Técnico SENA</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style/styles.css">
+    <link rel="icon" href="/style/img/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Planta Líquido-Líquido 300</h2>
+            <p class="sidebar-subtitle">Manual Técnico SENA</p>
+        </div>
+        
+        <ul class="nav-menu">
+            <li>
+                <a href="../../index.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="../introduccion/introduccion.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    <span>Introducción</span>
+                </a>
+            </li>
+            <li>
+                <a href="../operacion/operacion.html" class="nav-link has-submenu">
+                    <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v6m5.2-13.2-4.2 4.2m0 6 4.2 4.2M23 12h-6m-6 0H5m13.2 5.2-4.2-4.2m0-6 4.2-4.2"></path></svg>
+                    <span>Manual de Operación</span>
+                    <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <ul class="submenu">
+                    <li><a href="../operacion/operacion.html#generalidades">Generalidades</a></li>
+                    <li><a href="../operacion/operacion.html#descripcion">Descripción del Proceso</a></li>
+                    <li><a href="../operacion/operacion.html#componentes">Componentes</a></li>
+                    <li><a href="../operacion/operacion.html#instrumentacion">Instrumentación</a></li>
+                    <li><a href="../operacion/operacion.html#procedimientos">Procedimientos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../practicas/practicas.html" class="nav-link has-submenu">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"></path><path d="M8.5 2h7"></path></svg>
+                    <span>Manual de Prácticas</span>
+                    <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <ul class="submenu">
+                    <li><a href="../practicas/practicas.html#fundamentos">Fundamentos Teóricos</a></li>
+                    <li><a href="../practicas/practicas.html#practica-01">Práctica 01</a></li>
+                    <li><a href="../practicas/practicas.html#practica-02">Práctica 02</a></li>
+                    <li><a href="../practicas/practicas.html#practica-03">Práctica 03</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../mantenimiento mecanico/mantenimiento-mecanico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    <span>Mantenimiento Mecánico</span>
+                </a>
+            </li>
+            <li>
+                <a href="../mantenimiento electrico/mantenimiento-electrico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    <span>Mantenimiento Eléctrico</span>
+                </a>
+            </li>
+            <li>
+                <a href="../control automatico/control-automatico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                    <span>Control Automático</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container py-5" style="max-width: 900px;">
+                <div class="mb-4">
+                    <h1 class="display-5 fw-bold mb-3">Manual de Control Automático</h1>
+                    <p class="text-muted">
+                        Sistema de control automático, programación PLC y supervisión SCADA
+                    </p>
+                </div>
+
+                <!-- Generalidades -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-gear text-primary me-2"></i>
+                            1. Generalidades
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted">
+                            El sistema de control automático de la Planta de Extracción Líquido-Líquido está basado 
+                            en un Controlador Lógico Programable (PLC) industrial que gestiona todo el proceso de manera 
+                            automática o manual según la selección del operador.
+                        </p>
+                        <p class="text-muted">
+                            El sistema incluye interfaces de usuario tanto locales (pantalla GT30) como remotas (PC con 
+                            Wonderware InTouch) que permiten monitorear y controlar todas las variables del proceso en 
+                            tiempo real.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Descripción del Proceso -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-diagram-3 text-success me-2"></i>
+                            2. Descripción del Proceso a Automatizar
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted mb-4">
+                            El proceso de extracción líquido-líquido se divide en cuatro etapas principales que son 
+                            controladas automáticamente por el PLC:
+                        </p>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-2">Etapa 1: Cargue</h6>
+                                    <p class="small text-muted mb-0">
+                                        Preparación de tanques de solvente y alimentación con las cantidades necesarias 
+                                        para el proceso.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-2">Etapa 2: Llenado</h6>
+                                    <p class="small text-muted mb-0">
+                                        Llenado controlado de la columna de extracción hasta alcanzar el nivel operativo 
+                                        establecido.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-2">Etapa 3: Extracción</h6>
+                                    <p class="small text-muted mb-0">
+                                        Proceso continuo con control automático de flujos, nivel y agitación para 
+                                        optimizar la transferencia de masa.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-2">Etapa 4: Drenaje</h6>
+                                    <p class="small text-muted mb-0">
+                                        Vaciado controlado de la columna hacia los tanques de producto y limpieza 
+                                        del sistema.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sistema de Control -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-cpu text-info me-2"></i>
+                            3. Sistema de Control Automático
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h6 class="fw-bold">3.1 Control de Nivel en el Extractor</h6>
+                            <p class="small text-muted mb-3">
+                                El sistema implementa un lazo de control PID para mantener el nivel en la columna 
+                                de extracción en el setpoint deseado.
+                            </p>
+                            
+                            <div class="alert alert-secondary">
+                                <h6 class="fw-bold mb-2">Componentes del Lazo de Control:</h6>
+                                <ul class="small mb-0">
+                                    <li class="mb-2"><strong>Variable Controlada:</strong> Nivel en extractor E 308</li>
+                                    <li class="mb-2"><strong>Sensor:</strong> Transmisor de presión diferencial LT 308</li>
+                                    <li class="mb-2"><strong>Controlador:</strong> PID implementado en PLC</li>
+                                    <li><strong>Elemento Final:</strong> Válvula reguladora LCV 308</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h6 class="fw-bold mb-3">Variables Controladas y Manipuladas</h6>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="border rounded p-3 h-100">
+                                        <p class="fw-bold small mb-2">Variables Controladas</p>
+                                        <ul class="small mb-0">
+                                            <li>Nivel en extractor (LT 308)</li>
+                                            <li>Flujo de alimentación (FT 309)</li>
+                                            <li>Flujo de solvente (FT 310)</li>
+                                            <li>Velocidad de agitación (AG 301)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="border rounded p-3 h-100">
+                                        <p class="fw-bold small mb-2">Variables Medidas</p>
+                                        <ul class="small mb-0">
+                                            <li>Nivel tanques (LT 304-307)</li>
+                                            <li>Temperatura extractor (TT 308)</li>
+                                            <li>Presión líneas de proceso</li>
+                                            <li>Estados de bombas y válvulas</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Especificación Funcional -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-list-task text-warning me-2"></i>
+                            4. Especificación Funcional del Sistema de Control
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4 border-start border-primary border-4 ps-3">
+                            <h6 class="fw-bold mb-2">4.1 ETAPA 1: Cargue de Solvente y Alimento</h6>
+                            <div class="alert alert-info bg-opacity-10">
+                                <p class="small mb-2"><strong>Condiciones iniciales:</strong></p>
+                                <ul class="small mb-3">
+                                    <li>Verificar tanques vacíos (TA 304, TA 307)</li>
+                                    <li>Todas las válvulas cerradas</li>
+                                    <li>Sistema desenergizado</li>
+                                </ul>
+                                <p class="small mb-2"><strong>Secuencia:</strong></p>
+                                <ol class="small mb-0">
+                                    <li>Cargar manualmente solvente en TA 304</li>
+                                    <li>Cargar manualmente alimentación en TA 307</li>
+                                    <li>Verificar niveles con LT 304 y LT 307</li>
+                                    <li>Confirmar carga completa en HMI</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 border-start border-success border-4 ps-3">
+                            <h6 class="fw-bold mb-2">4.2 ETAPA 2: Llenado de la Columna</h6>
+                            <div class="alert alert-success bg-opacity-10">
+                                <p class="small mb-2"><strong>Objetivo:</strong> Llenar columna hasta nivel inicial (30%)</p>
+                                <p class="small mb-2"><strong>Secuencia automática:</strong></p>
+                                <ol class="small mb-0">
+                                    <li>Activar bomba M 310 (solvente) al 50% capacidad</li>
+                                    <li>Abrir válvula de alimentación al fondo de columna</li>
+                                    <li>Monitorear nivel LT 308</li>
+                                    <li>Al alcanzar 30%, detener bomba M 310</li>
+                                    <li>Activar agitador AG 301 a velocidad inicial</li>
+                                    <li>Iniciar bomba M 309 (alimentación)</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 border-start border-warning border-4 ps-3">
+                            <h6 class="fw-bold mb-2">4.3 ETAPA 3: Extracción</h6>
+                            <div class="alert alert-warning bg-opacity-10">
+                                <p class="small mb-2"><strong>Modo operación:</strong> Control continuo</p>
+                                <p class="small mb-2"><strong>Control activo:</strong></p>
+                                <ul class="small mb-3">
+                                    <li><strong>Control PID de nivel:</strong> Actúa sobre LCV 308</li>
+                                    <li><strong>Control de flujo alimentación:</strong> M 309 según setpoint</li>
+                                    <li><strong>Control de flujo solvente:</strong> M 310 según setpoint</li>
+                                    <li><strong>Control velocidad agitación:</strong> AG 301 según setpoint</li>
+                                </ul>
+                                <p class="small mb-2"><strong>Condiciones de término:</strong></p>
+                                <ul class="small mb-0">
+                                    <li>Nivel bajo en TA 304 o TA 307</li>
+                                    <li>Comando manual de operador</li>
+                                    <li>Tiempo programado cumplido</li>
+                                    <li>Alarma crítica activada</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="border-start border-danger border-4 ps-3">
+                            <h6 class="fw-bold mb-2">4.4 ETAPA 4: Drenaje de la Planta</h6>
+                            <div class="alert alert-danger bg-opacity-10">
+                                <p class="small mb-2"><strong>Secuencia automática:</strong></p>
+                                <ol class="small mb-0">
+                                    <li>Detener bombas M 309 y M 310</li>
+                                    <li>Reducir velocidad agitador gradualmente</li>
+                                    <li>Esperar separación de fases (5 min)</li>
+                                    <li>Abrir válvula LCV 308 completamente</li>
+                                    <li>Drenar fase pesada a TA 306 (refinado)</li>
+                                    <li>Drenar fase liviana a TA 305 (extracto)</li>
+                                    <li>Detener agitador AG 301</li>
+                                    <li>Purgar líneas de proceso</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Componentes del PLC -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-motherboard text-primary me-2"></i>
+                            5. Componentes del Controlador Lógico Programable
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">5.1 CPU FP0 C32T (NAIS)</h6>
+                            <div class="alert alert-secondary">
+                                <div class="row small">
+                                    <div class="col-md-6">
+                                        <p class="fw-bold mb-2">Características Principales:</p>
+                                        <ul class="mb-0">
+                                            <li>32 puntos I/O integrados</li>
+                                            <li>16 entradas digitales 24VDC</li>
+                                            <li>16 salidas digitales relay</li>
+                                            <li>Memoria programa: 16K pasos</li>
+                                            <li>Velocidad ejecución: 0.9 μs/paso</li>
+                                            <li>Reloj tiempo real integrado</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="fw-bold mb-2">Puertos Comunicación:</p>
+                                        <ul class="mb-0">
+                                            <li>Puerto 0: RS-232C (programación)</li>
+                                            <li>Puerto 1: RS-485 (expansión)</li>
+                                            <li>Protocolo: MEWTOCOL-COM</li>
+                                            <li>Baud rate: hasta 115.2 kbps</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">5.2 Módulo de Entradas Análogas</h6>
+                            <div class="border rounded p-3">
+                                <p class="small text-muted mb-3">
+                                    Módulo FP0-A04I con 4 canales de entrada análoga para conexión de transmisores 
+                                    de proceso.
+                                </p>
+                                <div class="row small">
+                                    <div class="col-6">
+                                        <p class="fw-bold mb-1">Especificaciones:</p>
+                                        <ul class="mb-0">
+                                            <li>Resolución: 12 bits</li>
+                                            <li>Rango: 4-20 mA / 0-10V</li>
+                                            <li>Precisión: ±0.3%</li>
+                                            <li>Tiempo conversión: 10 ms</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="fw-bold mb-1">Entradas Utilizadas:</p>
+                                        <ul class="mb-0">
+                                            <li>CH0: LT 308 (Nivel)</li>
+                                            <li>CH1: FT 309 (Flujo)</li>
+                                            <li>CH2: FT 310 (Flujo)</li>
+                                            <li>CH3: TT 308 (Temp)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h6 class="fw-bold mb-3">5.3 Módulo de Salidas Análogas</h6>
+                            <div class="border rounded p-3">
+                                <p class="small text-muted mb-3">
+                                    Módulo FP0-A04I con 2 canales de salida análoga para control de bombas 
+                                    dosificadoras y válvula reguladora.
+                                </p>
+                                <div class="row small">
+                                    <div class="col-6">
+                                        <p class="fw-bold mb-1">Especificaciones:</p>
+                                        <ul class="mb-0">
+                                            <li>Resolución: 12 bits</li>
+                                            <li>Rango salida: 4-20 mA</li>
+                                            <li>Precisión: ±0.5%</li>
+                                            <li>Carga máxima: 600 Ω</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="fw-bold mb-1">Salidas Utilizadas:</p>
+                                        <ul class="mb-0">
+                                            <li>CH0: M 309 (Bomba alim)</li>
+                                            <li>CH1: M 310 (Bomba solv)</li>
+                                            <li>CH2: LCV 308 (Válvula)</li>
+                                            <li>CH3: Reserva</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pantallas de Operación -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-display text-success me-2"></i>
+                            6. Pantalla Gráfica GT30
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted mb-4">
+                            La pantalla GT30 permite la operación y monitoreo local del proceso. Incluye múltiples 
+                            ventanas navegables con información del proceso.
+                        </p>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">Ventanas Disponibles:</h6>
+                                    <ul class="small mb-0">
+                                        <li><strong>Inicio:</strong> Pantalla principal con estado general</li>
+                                        <li><strong>Menú:</strong> Navegación entre ventanas</li>
+                                        <li><strong>Tipo Operación:</strong> Selección Manual/Auto</li>
+                                        <li><strong>Control:</strong> Ajuste de setpoints</li>
+                                        <li><strong>Reguladores:</strong> Parámetros PID</li>
+                                        <li><strong>Tendencias:</strong> Gráficas históricas</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">Funcionalidades:</h6>
+                                    <ul class="small mb-0">
+                                        <li>Visualización de variables en tiempo real</li>
+                                        <li>Ajuste de setpoints de proceso</li>
+                                        <li>Modificación parámetros PID</li>
+                                        <li>Visualización de alarmas</li>
+                                        <li>Gráficos de tendencia</li>
+                                        <li>Inicio/paro de secuencias</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sistema SCADA -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-pc-display text-info me-2"></i>
+                            7. Interfase de Operación en PC (SCADA)
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted mb-4">
+                            El sistema supervisorio Wonderware InTouch permite el monitoreo y control remoto del 
+                            proceso desde una estación de trabajo PC.
+                        </p>
+
+                        <div class="alert alert-info">
+                            <h6 class="fw-bold mb-3">Características del Sistema SCADA:</h6>
+                            <div class="row small">
+                                <div class="col-md-6">
+                                    <ul class="mb-0">
+                                        <li class="mb-2">✓ Sinóptico animado de la planta</li>
+                                        <li class="mb-2">✓ Tendencias en tiempo real</li>
+                                        <li class="mb-2">✓ Histórico de variables</li>
+                                        <li>✓ Sistema de alarmas configurable</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="mb-0">
+                                        <li class="mb-2">✓ Generación de reportes</li>
+                                        <li class="mb-2">✓ Control de acceso por usuarios</li>
+                                        <li class="mb-2">✓ Registro de eventos (data logging)</li>
+                                        <li>✓ Recetas de proceso</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h6 class="fw-bold mb-3">Pantallas Principales:</h6>
+                            <div class="mb-3 section-border">
+                                <h6 class="small fw-bold mb-1">Pantalla de Proceso</h6>
+                                <p class="small text-muted mb-0">
+                                    Vista general del proceso con animación de flujos, niveles y estados de equipos. 
+                                    Incluye indicadores numéricos de todas las variables.
+                                </p>
+                            </div>
+                            <div class="mb-3 section-border">
+                                <h6 class="small fw-bold mb-1">Pantalla de Tendencias</h6>
+                                <p class="small text-muted mb-0">
+                                    Gráficas históricas de hasta 8 variables simultáneas con zoom y desplazamiento temporal.
+                                </p>
+                            </div>
+                            <div class="section-border">
+                                <h6 class="small fw-bold mb-1">Pantalla de Control</h6>
+                                <p class="small text-muted mb-0">
+                                    Faceplates de control para ajuste de setpoints, parámetros PID y modo de operación 
+                                    de los controladores.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estructura de Programación -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-diagram-3 text-warning me-2"></i>
+                            11. Estructura de Programación
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted mb-4">
+                            El programa del PLC está estructurado en bloques funcionales organizados según metodología 
+                            GRAFCET (Sequential Function Chart).
+                        </p>
+
+                        <div class="alert alert-secondary">
+                            <h6 class="fw-bold mb-3">Organización del Programa:</h6>
+                            <div class="small">
+                                <div class="mb-3">
+                                    <p class="fw-bold mb-1">1. Inicialización:</p>
+                                    <p class="text-muted small mb-0">Configuración de módulos, reset de variables, verificación de hardware</p>
+                                </div>
+                                <div class="mb-3">
+                                    <p class="fw-bold mb-1">2. Lectura de Entradas:</p>
+                                    <p class="text-muted small mb-0">Acondicionamiento de señales análogas y digitales, filtrado</p>
+                                </div>
+                                <div class="mb-3">
+                                    <p class="fw-bold mb-1">3. Control Secuencial:</p>
+                                    <p class="text-muted small mb-0">GRAFCET con las 4 etapas del proceso, transiciones y acciones</p>
+                                </div>
+                                <div class="mb-3">
+                                    <p class="fw-bold mb-1">4. Control Regulatorio:</p>
+                                    <p class="text-muted small mb-0">Algoritmos PID, limitación de salidas, anti-windup</p>
+                                </div>
+                                <div class="mb-3">
+                                    <p class="fw-bold mb-1">5. Gestión de Alarmas:</p>
+                                    <p class="text-muted small mb-0">Detección, priorización y registro de alarmas</p>
+                                </div>
+                                <div class="mb-3">
+                                    <p class="fw-bold mb-1">6. Comunicaciones:</p>
+                                    <p class="text-muted small mb-0">Intercambio de datos con HMI y SCADA</p>
+                                </div>
+                                <div>
+                                    <p class="fw-bold mb-1">7. Escritura de Salidas:</p>
+                                    <p class="text-muted small mb-0">Actualización de salidas análogas y digitales</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info mt-3">
+                            <h6 class="fw-bold mb-2">Ciclo de Escaneo:</h6>
+                            <p class="small mb-0">
+                                El PLC ejecuta el programa completo cada 20 ms aproximadamente, garantizando una 
+                                respuesta rápida a los cambios en el proceso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="d-flex justify-content-between mt-5">
+                    <a href="/body/mantenimiento electrico/mantenimiento-electrico.html" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left me-2"></i>Mantenimiento Eléctrico
+                    </a>
+                    <a href="../../index.html" class="btn btn-primary">
+                        Volver al Inicio<i class="bi bi-house ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+</body>
+</html>

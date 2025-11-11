@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Prácticas | Manual Técnico SENA</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style/styles.css">
+    <link rel="icon" href="/style/img/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Planta Líquido-Líquido 300</h2>
+            <p class="sidebar-subtitle">Manual Técnico SENA</p>
+        </div>
+        
+        <ul class="nav-menu">
+            <li>
+                <a href="../../index.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="../introduccion/introduccion.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    <span>Introducción</span>
+                </a>
+            </li>
+            <li>
+                <a href="../operacion/operacion.html" class="nav-link has-submenu">
+                    <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v6m5.2-13.2-4.2 4.2m0 6 4.2 4.2M23 12h-6m-6 0H5m13.2 5.2-4.2-4.2m0-6 4.2-4.2"></path></svg>
+                    <span>Manual de Operación</span>
+                    <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <ul class="submenu">
+                    <li><a href="../operacion/operacion.html#generalidades">Generalidades</a></li>
+                    <li><a href="../operacion/operacion.html#descripcion">Descripción del Proceso</a></li>
+                    <li><a href="../operacion/operacion.html#componentes">Componentes</a></li>
+                    <li><a href="../operacion/operacion.html#instrumentacion">Instrumentación</a></li>
+                    <li><a href="../operacion/operacion.html#procedimientos">Procedimientos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../practicas/practicas.html" class="nav-link has-submenu">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"></path><path d="M8.5 2h7"></path></svg>
+                    <span>Manual de Prácticas</span>
+                    <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <ul class="submenu">
+                    <li><a href="../practicas/practicas.html#fundamentos">Fundamentos Teóricos</a></li>
+                    <li><a href="../practicas/practicas.html#practica-01">Práctica 01</a></li>
+                    <li><a href="../practicas/practicas.html#practica-02">Práctica 02</a></li>
+                    <li><a href="../practicas/practicas.html#practica-03">Práctica 03</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../mantenimiento mecanico/mantenimiento-mecanico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    <span>Mantenimiento Mecánico</span>
+                </a>
+            </li>
+            <li>
+                <a href="../mantenimiento electrico/mantenimiento-electrico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    <span>Mantenimiento Eléctrico</span>
+                </a>
+            </li>
+            <li>
+                <a href="../control automatico/control-automatico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                    <span>Control Automático</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container py-5" style="max-width: 900px;">
+                <div class="mb-4">
+                    <h1 class="display-5 fw-bold mb-3">Manual de Prácticas</h1>
+                    <p class="text-muted">
+                        Fundamentos teóricos y procedimientos para prácticas de laboratorio
+                    </p>
+                </div>
+
+                <!-- Generalidades -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-book text-primary me-2"></i>
+                            1. Generalidades
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted">
+                            El manual de prácticas proporciona los fundamentos teóricos y procedimientos experimentales 
+                            necesarios para realizar operaciones de extracción líquido-líquido en la planta piloto.
+                        </p>
+                        <p class="text-muted">
+                            Las prácticas están diseñadas para que los estudiantes comprendan los principios de transferencia 
+                            de masa, equilibrio de fases y eficiencia de separación en sistemas de extracción continua.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Aspectos Importantes -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-lightbulb text-warning me-2"></i>
+                            2. Aspectos Importantes del Proceso de Extracción
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-3">2.1 Principales Aplicaciones</h6>
+                        <ul class="small">
+                            <li>Separación de componentes con puntos de ebullición cercanos</li>
+                            <li>Purificación de productos químicos</li>
+                            <li>Recuperación de solventes</li>
+                            <li>Concentración de soluciones acuosas</li>
+                        </ul>
+
+                        <h6 class="fw-bold mb-3 mt-4">2.2 Factores para una Buena Extracción</h6>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="border rounded p-3">
+                                    <p class="fw-bold small mb-2">Selectividad del Solvente</p>
+                                    <p class="small text-muted mb-0">Alta afinidad por el soluto a extraer</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="border rounded p-3">
+                                    <p class="fw-bold small mb-2">Inmiscibilidad</p>
+                                    <p class="small text-muted mb-0">Baja solubilidad mutua de fases</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="border rounded p-3">
+                                    <p class="fw-bold small mb-2">Diferencia de Densidad</p>
+                                    <p class="small text-muted mb-0">Facilita separación de fases</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="border rounded p-3">
+                                    <p class="fw-bold small mb-2">Tensión Interfacial</p>
+                                    <p class="small text-muted mb-0">Adecuada para formación de gotas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fundamentos Teóricos -->
+                <section id="fundamentos" class="mb-5 scroll-mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title h5 mb-0">
+                                <i class="bi bi-calculator text-info me-2"></i>
+                                3. Fundamentos Teóricos del Proceso de Extracción
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <h6 class="fw-bold">3.1 Extracción en Una Etapa</h6>
+                                <p class="small text-muted mb-3">
+                                    En una operación de extracción simple, la alimentación se pone en contacto con el solvente 
+                                    en una sola etapa. El equilibrio se alcanza cuando las concentraciones en ambas fases 
+                                    no cambian con el tiempo.
+                                </p>
+                                <div class="alert alert-secondary">
+                                    <p class="small font-monospace mb-0">
+                                        Balance de masa: F + S = E + R<br>
+                                        Donde: F = Alimentación, S = Solvente, E = Extracto, R = Refinado
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h6 class="fw-bold">3.2 Extracción en Etapas Múltiples a Contracorriente</h6>
+                                <p class="small text-muted mb-3">
+                                    En operaciones con múltiples etapas, la alimentación y el solvente fluyen en direcciones 
+                                    opuestas, aumentando la eficiencia de separación.
+                                </p>
+                                
+                                <div class="section-border mb-3">
+                                    <h6 class="small fw-bold mb-2">3.2.1 Cálculo del Número de Etapas Ideales</h6>
+                                    <p class="small text-muted mb-0">
+                                        Se utilizan métodos gráficos o analíticos para determinar el número de etapas 
+                                        teóricas necesarias para lograr la separación deseada.
+                                    </p>
+                                </div>
+
+                                <div class="section-border mb-3">
+                                    <h6 class="small fw-bold mb-2">3.2.2 Método Gráfico</h6>
+                                    <p class="small text-muted mb-0">
+                                        Utiliza diagramas de equilibrio y líneas de operación para determinar 
+                                        gráficamente el número de etapas.
+                                    </p>
+                                </div>
+
+                                <div class="section-border">
+                                    <h6 class="small fw-bold mb-2">3.2.3 Cálculo del Número de Etapas Reales</h6>
+                                    <p class="small text-muted mb-0">
+                                        Se aplica la eficiencia de etapa para convertir etapas ideales en etapas reales 
+                                        considerando factores como mezclado imperfecto y tiempo de contacto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Práctica 01 -->
+                <section id="practica-01" class="mb-5 scroll-mt-5">
+                    <div class="card border-primary">
+                        <div class="card-header bg-primary bg-opacity-10">
+                            <h3 class="card-title h5 mb-0">
+                                <i class="bi bi-flask text-primary me-2"></i>
+                                Práctica 01: Extracción de Ácido Acético
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="fw-bold">Sistema: Cloroformo – Ácido Acético – Agua</h6>
+                            
+                            <div class="alert alert-info mb-3">
+                                <h6 class="fw-bold mb-2">5.1.1 Fundamento</h6>
+                                <p class="small mb-0">
+                                    Esta práctica permite estudiar la extracción de ácido acético de una mezcla 
+                                    cloroformo-ácido acético utilizando agua como solvente extractante. El ácido acético 
+                                    es más soluble en agua que en cloroformo.
+                                </p>
+                            </div>
+
+                            <div class="mb-3">
+                                <h6 class="fw-bold">5.1.2 Procedimiento</h6>
+                                <ol class="small">
+                                    <li>Preparar la mezcla de alimentación (cloroformo + ácido acético)</li>
+                                    <li>Cargar el tanque de solvente (agua)</li>
+                                    <li>Configurar los flujos de alimentación y solvente</li>
+                                    <li>Ajustar la velocidad de agitación</li>
+                                    <li>Iniciar el proceso en modo automático</li>
+                                    <li>Tomar muestras a intervalos regulares</li>
+                                    <li>Drenar y recolectar productos (extracto y refinado)</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h6 class="fw-bold">5.1.3 Análisis de Laboratorio</h6>
+                                <p class="small text-muted mb-0">
+                                    Determinar la concentración de ácido acético en las muestras mediante titulación 
+                                    con NaOH 0.1N. Calcular la eficiencia de extracción y el número de etapas equivalentes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Práctica 02 -->
+                <section id="practica-02" class="mb-5 scroll-mt-5">
+                    <div class="card border-success">
+                        <div class="card-header bg-success bg-opacity-10">
+                            <h3 class="card-title h5 mb-0">
+                                <i class="bi bi-flask text-success me-2"></i>
+                                Práctica 02: Extracción de Ácido Benzoico
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="fw-bold">Sistema: Agua – Ácido Benzoico – Tolueno</h6>
+                            
+                            <div class="alert alert-success bg-opacity-10 mb-3">
+                                <h6 class="fw-bold mb-2">5.2.1 Fundamento</h6>
+                                <p class="small mb-0">
+                                    Extracción de ácido benzoico de una solución acuosa utilizando tolueno como solvente. 
+                                    El ácido benzoico es más soluble en solventes orgánicos que en agua.
+                                </p>
+                            </div>
+
+                            <div class="mb-3">
+                                <h6 class="fw-bold">5.2.2 Procedimiento</h6>
+                                <ol class="small">
+                                    <li>Preparar solución acuosa de ácido benzoico (alimentación)</li>
+                                    <li>Cargar tolueno en el tanque de solvente</li>
+                                    <li>Ajustar parámetros de operación (flujos, agitación)</li>
+                                    <li>Ejecutar el proceso de extracción</li>
+                                    <li>Recolectar y analizar muestras</li>
+                                    <li>Calcular coeficientes de distribución</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h6 class="fw-bold">5.2.3 Análisis de Laboratorio</h6>
+                                <p class="small text-muted mb-0">
+                                    Análisis por espectrofotometría UV o titulación alcalimétrica. Determinación 
+                                    del coeficiente de distribución y eficiencia de separación.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Práctica 03 -->
+                <section id="practica-03" class="mb-5 scroll-mt-5">
+                    <div class="card border-warning">
+                        <div class="card-header bg-warning bg-opacity-10">
+                            <h3 class="card-title h5 mb-0">
+                                <i class="bi bi-flask text-warning me-2"></i>
+                                Práctica 03: Extracción de Ácido Acético con Acetato de Etilo
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="fw-bold">Sistema: Agua – Ácido Acético – Acetato de Etilo</h6>
+                            
+                            <div class="alert alert-warning bg-opacity-10 mb-3">
+                                <h6 class="fw-bold mb-2">5.3.1 Fundamento</h6>
+                                <p class="small mb-0">
+                                    Estudio de la extracción de ácido acético de una solución acuosa utilizando 
+                                    acetato de etilo. Permite analizar la influencia de la relación solvente/alimentación 
+                                    en la eficiencia del proceso.
+                                </p>
+                            </div>
+
+                            <div class="mb-3">
+                                <h6 class="fw-bold">5.3.2 Procedimiento</h6>
+                                <ol class="small">
+                                    <li>Preparar solución acuosa de ácido acético</li>
+                                    <li>Cargar acetato de etilo (solvente)</li>
+                                    <li>Variar la relación de flujos S/F</li>
+                                    <li>Registrar temperaturas y niveles</li>
+                                    <li>Tomar muestras en cada condición</li>
+                                    <li>Realizar balance de masa global</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h6 class="fw-bold">5.3.3 Análisis de Laboratorio</h6>
+                                <p class="small text-muted mb-0">
+                                    Titulación ácido-base para cuantificar ácido acético. Construcción de curvas 
+                                    de equilibrio y líneas de operación. Determinación experimental del número de 
+                                    etapas teóricas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Navigation Buttons -->
+                <div class="d-flex justify-content-between mt-5">
+                    <a href="/body/operacion/operacion.html" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left me-2"></i>Manual de Operación
+                    </a>
+                    <a href="/body/mantenimiento mecanico/mantenimiento-mecanico.html" class="btn btn-primary">
+                        Mantenimiento Mecánico<i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento Eléctrico | Manual Técnico SENA</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style/styles.css">
+    <link rel="icon" href="/style/img/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Planta Líquido-Líquido 300</h2>
+            <p class="sidebar-subtitle">Manual Técnico SENA</p>
+        </div>
+        
+        <ul class="nav-menu">
+            <li>
+                <a href="../../index.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="../introduccion/introduccion.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    <span>Introducción</span>
+                </a>
+            </li>
+            <li>
+                <a href="../operacion/operacion.html" class="nav-link has-submenu">
+                    <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v6m5.2-13.2-4.2 4.2m0 6 4.2 4.2M23 12h-6m-6 0H5m13.2 5.2-4.2-4.2m0-6 4.2-4.2"></path></svg>
+                    <span>Manual de Operación</span>
+                    <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <ul class="submenu">
+                    <li><a href="../operacion/operacion.html#generalidades">Generalidades</a></li>
+                    <li><a href="../operacion/operacion.html#descripcion">Descripción del Proceso</a></li>
+                    <li><a href="../operacion/operacion.html#componentes">Componentes</a></li>
+                    <li><a href="../operacion/operacion.html#instrumentacion">Instrumentación</a></li>
+                    <li><a href="../operacion/operacion.html#procedimientos">Procedimientos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../practicas/practicas.html" class="nav-link has-submenu">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"></path><path d="M8.5 2h7"></path></svg>
+                    <span>Manual de Prácticas</span>
+                    <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <ul class="submenu">
+                    <li><a href="../practicas/practicas.html#fundamentos">Fundamentos Teóricos</a></li>
+                    <li><a href="../practicas/practicas.html#practica-01">Práctica 01</a></li>
+                    <li><a href="../practicas/practicas.html#practica-02">Práctica 02</a></li>
+                    <li><a href="../practicas/practicas.html#practica-03">Práctica 03</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../mantenimiento mecanico/mantenimiento-mecanico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    <span>Mantenimiento Mecánico</span>
+                </a>
+            </li>
+            <li>
+                <a href="../mantenimiento electrico/mantenimiento-electrico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    <span>Mantenimiento Eléctrico</span>
+                </a>
+            </li>
+            <li>
+                <a href="../control automatico/control-automatico.html" class="nav-link">
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                    <span>Control Automático</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container py-5" style="max-width: 900px;">
+                <div class="mb-4">
+                    <h1 class="display-5 fw-bold mb-3">Manual de Mantenimiento Eléctrico e Instrumental</h1>
+                    <p class="text-muted">
+                        Guía completa para el mantenimiento del sistema eléctrico, instrumentación y control
+                    </p>
+                </div>
+
+                <!-- Introducción -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-lightning text-warning me-2"></i>
+                            1. Introducción
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted">
+                            El manual de mantenimiento eléctrico e instrumental proporciona las instrucciones necesarias 
+                            para el mantenimiento preventivo y correctivo de todos los componentes eléctricos, electrónicos 
+                            y de instrumentación de la Planta de Extracción Líquido-Líquido.
+                        </p>
+                        <p class="text-muted">
+                            Este manual incluye procedimientos de calibración, diagnóstico de fallas, y especificaciones 
+                            técnicas de los equipos instalados.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Características Generales -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-gear text-primary me-2"></i>
+                            2. Características Generales de la Planta
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">Sistema Eléctrico</h6>
+                                    <ul class="small mb-0">
+                                        <li>Alimentación: 220V AC trifásica</li>
+                                        <li>Protecciones: Breakers y fusibles</li>
+                                        <li>Tablero de control principal</li>
+                                        <li>Cableado categoría industrial</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">Sistema de Control</h6>
+                                    <ul class="small mb-0">
+                                        <li>PLC: FP0 C32T (NAIS)</li>
+                                        <li>Pantalla HMI: GT30</li>
+                                        <li>Supervisorio: Wonderware InTouch</li>
+                                        <li>Comunicación: RS-232/RS-485</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Precauciones -->
+                <div class="card border-danger mb-4">
+                    <div class="card-header bg-danger bg-opacity-10">
+                        <h5 class="card-title mb-0 text-danger">
+                            <i class="bi bi-exclamation-triangle me-2"></i>
+                            4. Precauciones de Seguridad
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-danger">
+                            <h6 class="alert-heading fw-bold">ADVERTENCIAS ELÉCTRICAS</h6>
+                            <ul class="small mb-0">
+                                <li class="mb-2">⚡ Desenergizar COMPLETAMENTE antes de cualquier intervención</li>
+                                <li class="mb-2">⚡ Verificar ausencia de tensión con instrumento adecuado</li>
+                                <li class="mb-2">⚡ Bloquear y etiquetar el tablero principal durante mantenimiento</li>
+                                <li class="mb-2">⚡ Solo personal calificado puede realizar intervenciones eléctricas</li>
+                                <li>⚡ Usar herramientas aisladas y EPP apropiado</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h6 class="fw-bold mb-3">4.1 Sistemas de Emergencia</h6>
+                            <div class="alert alert-secondary">
+                                <ul class="small mb-0">
+                                    <li>Botón de paro de emergencia en tablero principal</li>
+                                    <li>Luces de señalización de estado operativo</li>
+                                    <li>Alarmas audibles para condiciones críticas</li>
+                                    <li>Extintor tipo CO₂ cerca del tablero eléctrico</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instrumentación -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-speedometer2 text-info me-2"></i>
+                            6. Instrumentación
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <!-- Transmisor de Presión Diferencial -->
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">6.1 Transmisor de Presión Diferencial</h6>
+                                    <div class="mb-3">
+                                        <p class="small mb-1"><strong>Función:</strong> Medición de nivel en extractor</p>
+                                        <p class="small mb-1"><strong>Rango:</strong> 0-100 mbar</p>
+                                        <p class="small mb-1"><strong>Salida:</strong> 4-20 mA</p>
+                                        <p class="small mb-1"><strong>Calibración:</strong> Semestral</p>
+                                    </div>
+                                    <div class="alert alert-secondary">
+                                        <p class="small fw-bold mb-2">Mantenimiento:</p>
+                                        <ul class="small mb-0">
+                                            <li>Verificar conexiones eléctricas</li>
+                                            <li>Limpiar membranas sensoras</li>
+                                            <li>Calibrar con patrón certificado</li>
+                                            <li>Verificar cero y span</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Transmisor de Nivel -->
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">6.2 Transmisor de Nivel</h6>
+                                    <div class="mb-3">
+                                        <p class="small mb-1"><strong>Tipo:</strong> Manométrico</p>
+                                        <p class="small mb-1"><strong>Aplicación:</strong> Tanques TA-304 a TA-307</p>
+                                        <p class="small mb-1"><strong>Salida:</strong> 4-20 mA</p>
+                                        <p class="small mb-1"><strong>Precisión:</strong> ±0.5%</p>
+                                    </div>
+                                    <div class="alert alert-secondary">
+                                        <p class="small fw-bold mb-2">Ajustes:</p>
+                                        <ul class="small mb-0">
+                                            <li>Ajuste de cero con potenciómetro</li>
+                                            <li>Verificación con nivel conocido</li>
+                                            <li>Inspección de conexiones</li>
+                                            <li>Verificación de linealidad</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Transmisor de Flujo -->
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">6.3 Transmisor de Flujo</h6>
+                                    <div class="mb-3">
+                                        <p class="small mb-1"><strong>Tipo:</strong> Turbina</p>
+                                        <p class="small mb-1"><strong>Rango:</strong> 0-30 l/h</p>
+                                        <p class="small mb-1"><strong>Salida:</strong> 4-20 mA</p>
+                                        <p class="small mb-1"><strong>Material:</strong> PVC</p>
+                                    </div>
+                                    <div class="alert alert-secondary">
+                                        <p class="small fw-bold mb-2">Mantenimiento:</p>
+                                        <ul class="small mb-0">
+                                            <li>Limpieza de turbina</li>
+                                            <li>Verificación de rodamientos</li>
+                                            <li>Calibración con patrón</li>
+                                            <li>Inspección visual</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Transmisor de Temperatura -->
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">6.4 Transmisor de Temperatura</h6>
+                                    <div class="mb-3">
+                                        <p class="small mb-1"><strong>Sensor:</strong> PT100</p>
+                                        <p class="small mb-1"><strong>Rango:</strong> 0-100°C</p>
+                                        <p class="small mb-1"><strong>Salida:</strong> 4-20 mA</p>
+                                        <p class="small mb-1"><strong>Montaje:</strong> Proceso</p>
+                                    </div>
+                                    <div class="alert alert-secondary">
+                                        <p class="small fw-bold mb-2">Verificación:</p>
+                                        <ul class="small mb-0">
+                                            <li>Baño térmico calibrado</li>
+                                            <li>Verificar resistencia sensor</li>
+                                            <li>Comprobar conexiones</li>
+                                            <li>Verificar aislamiento</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actuadores -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-gear text-success me-2"></i>
+                            7. Actuadores
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">7.1 Válvula Reguladora (LCV 308)</h6>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <p class="small mb-3">
+                                        Válvula de control de nivel con actuador neumático y posicionador electro-neumático. 
+                                        Recibe señal 4-20 mA del controlador.
+                                    </p>
+                                    <div class="alert alert-secondary">
+                                        <p class="fw-bold small mb-2">Especificaciones:</p>
+                                        <ul class="small mb-0">
+                                            <li>Tamaño: 1/2"</li>
+                                            <li>Acción: Aire para abrir</li>
+                                            <li>Presión aire: 20-100 PSI</li>
+                                            <li>Recorrido: 0-100%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="alert alert-info">
+                                        <p class="fw-bold small mb-2">Mantenimiento:</p>
+                                        <ul class="small mb-0">
+                                            <li>Calibración posicionador (trimestral)</li>
+                                            <li>Lubricación vástago (semestral)</li>
+                                            <li>Verificación fugas aire</li>
+                                            <li>Prueba de carrera completa</li>
+                                            <li>Verificación de empaquetaduras</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">7.2 Bombas Dosificadoras (M 309, M 310)</h6>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <p class="small mb-3">
+                                        Bombas electromagnéticas tipo diafragma marca Milton Roy. Control de flujo mediante 
+                                        señal 4-20 mA convertida a pulsos.
+                                    </p>
+                                    <div class="alert alert-secondary">
+                                        <p class="fw-bold small mb-2">Características:</p>
+                                        <ul class="small mb-0">
+                                            <li>Flujo máximo: 30 l/h</li>
+                                            <li>Presión máx: 7 bar</li>
+                                            <li>Potencia: 44 W</li>
+                                            <li>Alimentación: 120V AC</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="alert alert-info">
+                                        <p class="fw-bold small mb-2">Mantenimiento:</p>
+                                        <ul class="small mb-0">
+                                            <li>Inspección diafragma (mensual)</li>
+                                            <li>Limpieza válvulas check</li>
+                                            <li>Verificación calibración</li>
+                                            <li>Limpieza cabezal bomba</li>
+                                            <li>Cambio de sellos (anual)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h6 class="fw-bold mb-3">7.3 Controlador de RPM y Torque (Agitador)</h6>
+                            <div class="alert alert-secondary">
+                                <p class="small mb-3">
+                                    Controlador electrónico SEVODYNE para agitador AG 301. Permite ajuste de velocidad 
+                                    entre 0-1000 RPM con display digital local.
+                                </p>
+                                <div class="row small">
+                                    <div class="col-6">
+                                        <p class="fw-bold mb-2">Parámetros ajustables:</p>
+                                        <ul class="small mb-0">
+                                            <li>Velocidad (RPM)</li>
+                                            <li>Rampa de aceleración</li>
+                                            <li>Límite de corriente</li>
+                                            <li>Modo operación</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="fw-bold mb-2">Mantenimiento:</p>
+                                        <ul class="small mb-0">
+                                            <li>Limpieza de ventilación</li>
+                                            <li>Verificar conexiones</li>
+                                            <li>Calibración velocidad</li>
+                                            <li>Backup parámetros</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PLC y Control -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-cpu text-primary me-2"></i>
+                            Sistema PLC y Pantalla HMI
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">PLC NAIS FP0 C32T</h6>
+                                    <ul class="small mb-0">
+                                        <li>32 puntos I/O totales</li>
+                                        <li>16 entradas digitales</li>
+                                        <li>16 salidas digitales</li>
+                                        <li>Módulos expansión análogos</li>
+                                        <li>Puerto programación RS-232</li>
+                                        <li>Memoria: 16K pasos</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="border rounded p-3 h-100">
+                                    <h6 class="fw-bold mb-3">Pantalla GT30</h6>
+                                    <ul class="small mb-0">
+                                        <li>Display LCD monocromático</li>
+                                        <li>Teclas función programables</li>
+                                        <li>Comunicación con PLC</li>
+                                        <li>Gráficos de tendencia</li>
+                                        <li>Alarmas visuales</li>
+                                        <li>Backup en memoria</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <h6 class="fw-bold mb-2">Mantenimiento del Sistema de Control:</h6>
+                            <div class="row small">
+                                <div class="col-md-6">
+                                    <ul class="mb-0">
+                                        <li>Backup periódico del programa</li>
+                                        <li>Limpieza de contactos</li>
+                                        <li>Verificación batería PLC</li>
+                                        <li>Actualización firmware</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="mb-0">
+                                        <li>Calibración pantalla táctil</li>
+                                        <li>Limpieza de display</li>
+                                        <li>Verificar comunicaciones</li>
+                                        <li>Prueba de funciones</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solución de Fallas -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="bi bi-tools text-danger me-2"></i>
+                            8. Guía para la Solución de Fallas
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-sm small">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Síntoma</th>
+                                        <th>Causa Probable</th>
+                                        <th>Solución</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>PLC no enciende</td>
+                                        <td>Falla fuente alimentación</td>
+                                        <td>Verificar voltaje entrada, revisar fusibles</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lectura errática sensores</td>
+                                        <td>Interferencia EMI o cableado</td>
+                                        <td>Verificar blindaje, separar cables potencia/señal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Válvula no responde</td>
+                                        <td>Falla actuador o señal</td>
+                                        <td>Verificar señal 4-20mA, presión aire, posicionador</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bomba no dosifica</td>
+                                        <td>Diafragma roto o válvulas sucias</td>
+                                        <td>Cambiar diafragma, limpiar válvulas check</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pantalla sin imagen</td>
+                                        <td>Falla alimentación o backlight</td>
+                                        <td>Verificar 24VDC, ajustar contraste, reemplazar backlight</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="alert alert-secondary mt-4">
+                            <h6 class="fw-bold mb-2">Herramientas de Diagnóstico:</h6>
+                            <div class="row small">
+                                <div class="col-6">
+                                    <p class="mb-1">• Multímetro digital</p>
+                                    <p class="mb-1">• Calibrador de procesos</p>
+                                    <p class="mb-1">• Software de programación PLC</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="mb-1">• Analizador de comunicaciones</p>
+                                    <p class="mb-1">• Megger (medidor aislamiento)</p>
+                                    <p class="mb-1">• Osciloscopio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="d-flex justify-content-between mt-5">
+                    <a href="/body/mantenimiento mecanico/mantenimiento-mecanico.html" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left me-2"></i>Mantenimiento Mecánico
+                    </a>
+                    <a href="/body/control automatico/control-automatico.html" class="btn btn-primary">
+                        Control Automático<i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+</body>
+</html>
